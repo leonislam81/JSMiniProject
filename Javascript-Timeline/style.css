@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+body {
+  background: #F1F1F1;
+  font-family: 'Merriweather', serif;
+}
+
+.container {
+  padding: 10px;
+  width: 90%;
+  min-width: 600px;
+  margin: auto;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.eventInfo {
+  position: relative;
+  top: 80px;
+  left: 0;
+  width: 100%;
+}
+
+.eventInfo ol,
+.timeInd ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.eventInfo li {
+  padding: 5%;
+  position: absolute;
+  width: 90%;
+  left: 0;
+  top: 50px;
+  border: 1px solid #ddd;
+  transition: opacity 1s ease-in-out;
+}
+
+.eventInfo img {
+  float: left;
+  max-width: 300px;
+  padding: 5px;
+  border: 5px solid white;
+  margin: 5px;
+}
+
+.eventInfo img::after {
+  clear: both;
+}
+
+
+.timeInd {
+  position: relative;
+  left: 50px;
+  top: 50px;
+}
+
+.timeInd li {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 60px;
+  border: 1px solid #33aa55;
+  border-radius: 50%;
+  line-height: 60px;
+  background-color: seashell;
+  color: black;
+  cursor: pointer;
+  transition: all ease-in-out .5s;
+}
+
+.timeInd li:before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 10px;
+  top: 25px;
+  left: -300px;
+  z-index: -999;
+  background-color: #ddd;
+  transition: all ease-in-out .5s;
+}
+
+.done.active {
+  background-color: green;
+  color: white;
+}
+
+.done:before {
+  background-color: green !important;
+}
+
+.btn {
+  position: absolute;
+  top: 10px;
+  width: 100px;
+  height: 50px;
+  background-color: steelblue;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.5;
+}
+
+.prev {
+  left: 60px;
+}
+
+.next {
+  right: 60px;
+}
