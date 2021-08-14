@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+.carousel {
+    position: relative;
+    margin: auto;
+    max-width: 90rem;
+    overflow:hidden;
+    height: 80vh;
+    background-color: #ddd;
+}
+.carousel img{
+    width:100%;
+    height: 100%;
+}
+.sel {
+    cursor: pointer;
+}
+.sel:hover{
+    background-color: rgba(255,255,255,0.5);
+}
+
+.indDots{
+    z-index: 200;
+    position: absolute;
+    bottom:10px;
+    width:100%;
+    text-align: center;
+    padding:5px;
+}
+.dot{
+    margin:0 10px;
+    height: 20px;
+    width:20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    border:1px solid white;
+    display: inline-block;
+
+}
+.slide {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    display: none;
+    animation: fadein 2s;
+    font-family: 'Langar', cursive;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity :1;}
+}
+
+.slide h3{
+    font-size: 3.5em;
+    position: absolute;
+    top:10%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255,255,255,0.5);
+    padding:10px;
+    color:black;
+}
+.controls{
+    z-index: 300;
+    font-size: 3em;
+    position: absolute;
+    top:3%;
+    left:0;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    opacity: 0.5;
+}
+.controls:hover{
+    opacity: 1;
+    z-index: 300;
+}
+.slide p{
+    position: absolute;
+    bottom:20%;
+    left:0; 
+    width:100%;
+    background-color: rgba(0,0,0,0.5);
+    padding:10px;
+    color:white;
+}
+.active{
+    background-color: #222;
+}
+
+@media screen and (max-width: 600px) {
+    .carousel {
+        height: 40vh;
+    }
+    .slide h3{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 920px) {
+    .carousel {
+        height: 60vh;
+    }
+    .slide h3{
+        font-size: 1.5em;
+    }
+}
