@@ -1,0 +1,41 @@
+.h1{
+    width:100%;
+    text-align: center;
+}
+.pagin {
+    display: block;
+    margin:auto;
+}
+.moreContent {
+    display: inline-block;
+    width:300px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+.active{
+    background-color: red;
+    font-size: 1.4em;
+}
+.btn:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.btn{
+    margin:0 5px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.2em;
+    display: inline-block;
+    color:#000;
+}
+.mute{
+    color:#ddd;
+}
+.main{
+    display: block;
+    padding:20px;
+    text-align: center;
+}
